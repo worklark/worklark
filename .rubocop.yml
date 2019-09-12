@@ -1,0 +1,18 @@
+require: rubocop-rails
+
+AllCops:
+  Exclude:
+    - 'node_modules/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'bin/*'
+    - !ruby/regexp /old_and_unused\.rb$/
+
+# The default 80 is too short
+Metrics/LineLength:
+  Max: 120
+
+# This SHOULD be globally enabled instead
+Style/FrozenStringLiteralComment:
+  Enabled: false
