@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Worklark</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+  </head>
+
+  <body>
+    <!-- MODALS
+    ================================================== -->
+    <%= render partial: 'static_pages/shared/modals' %>
+
+    <!-- NAVBAR
+    ================================================== -->
+    <%= render partial: 'static_pages/shared/navbar', locals: {
+      class_list: "navbar-light bg-white",
+      type: "boxed"
+    } %>
+    <!-- WELCOME
+    ================================================== -->
+
+    <%= yield %>
+
+    <!-- FOOTER
+    ================================================== -->
+    <%= render partial: 'static_pages/shared/footer', locals: {
+      class_list: "bg-gray-200"
+    } %>
+
+    <%= javascript_pack_tag 'static_pages' %>
+
+  </body>
+</html>

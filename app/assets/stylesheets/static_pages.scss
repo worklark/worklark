@@ -1,0 +1,65 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'bootstrap/scss/functions';
+
+// Theme functions
+@import '../../../vendor/Landkit-1.1.0/src/assets/scss/theme/functions';
+
+// Custom variables
+$blue: #007BFF;
+$indigo: #6610F2;
+$purple: #6F42C1;
+$pink: #E83E8C;
+$red: #DC3545;
+$orange: #FD7E14;
+$yellow: #FFC107;
+$green: #28A745;
+$teal: #20C997;
+$cyan: #17A2B8;
+$white: #FFFFFF;
+$gray: #869AB8;
+$gray-dark: #384C74;
+$primary: #0A9EBE;
+$secondary: #034569;
+$success: #04BBEA;
+$info: #7C69EF;
+$warning: #FAD776;
+$danger: #DF4759;
+$light: #F9FBFD;
+$dark: #2B354F;
+$primary-desat: #6C8AEC;
+$black: #161C2D;
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-base: 'Roboto Slab', serif !default;
+
+$font-weight-normal: 200 !default;
+$font-weight-bold: 400 !default;
+
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 200;
+  src: url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+}
+
+@font-face {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 200;
+  src: url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
+}
+
+// Theme variables
+@import '../../../vendor/Landkit-1.1.0/src/assets/scss/theme/variables';
+
+// Bootstrap core
+@import 'bootstrap/scss/bootstrap';
+
+// Theme core
+@import '../../../vendor/Landkit-1.1.0/src/assets/scss/theme/theme';
