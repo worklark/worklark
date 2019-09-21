@@ -11,7 +11,7 @@ class StaticPagesController < ApplicationController
   def privacy_policy
   end
 
-  def contact
+  def support
   end
 
   def pricing
