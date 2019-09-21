@@ -15,6 +15,10 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
+const images = require.context('../../assets/images', true)
+const imagePath = (name) => images(name, true)
+
+
 import feather from 'feather-icons/dist/feather.min.js';
 
 const linkKitImages = require.context('../../../vendor/Landkit-1.1.0/src/assets/img', true)
