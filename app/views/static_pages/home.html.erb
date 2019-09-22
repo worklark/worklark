@@ -211,231 +211,301 @@
 
             <!-- Form -->
             <%= simple_form_for(Invitation.new) do |f| %>
-              <div class="form-label-group">
-                <%= f.input_field :name, class: 'form-control form-control-flush', placeholder: 'Name' %>
-                <%= f.label :name %>
-              </div>
-              <div class="form-label-group">
-                <%= f.input_field :business, class: 'form-control form-control-flush', placeholder: 'Business' %>
-                <%= f.label :business %>
-              </div>
-              <div class="form-label-group">
-                <%= f.input_field :email, class: 'form-control form-control-flush', placeholder: 'Email' %>
-                <%= f.label :email %>
-              </div>
-              <div class="mt-6">
-                <%= f.button :submit, 'Apply for invite', class: 'btn btn-block btn-success lift' %>
-              </div>
-            <% end %>
-          </div>
-
+            <div class="form-label-group">
+              <%= f.input_field :name, class: 'form-control form-control-flush', placeholder: 'Name' %>
+              <%= f.label :name %>
+            </div>
+            <div class="form-label-group">
+              <%= f.input_field :business, class: 'form-control form-control-flush', placeholder: 'Business' %>
+              <%= f.label :business %>
+            </div>
+            <div class="form-label-group">
+              <%= f.input_field :email, class: 'form-control form-control-flush', placeholder: 'Email' %>
+              <%= f.label :email %>
+            </div>
+            <div class="mt-6">
+              <%= f.button :submit, 'Apply for invite', class: 'btn btn-block btn-success lift' %>
+            </div>
+          <% end %>
         </div>
 
       </div>
-    </div>
-    <!-- / .row -->
 
+    </div>
   </div>
-  <!-- / .container -->
+  <!-- / .row -->
+
+</div>
+<!-- / .container -->
 </section>
 
 <!-- SHAPE ================================================== -->
 <div class="position-relative mt-n8">
-  <div class="shape shape-bottom shape-fluid-x svg-shim text-gray-200">
-    <%= render_landkit_svg 'img/shapes/curves/curve-3.svg' %>
-  </div>
+<div class="shape shape-bottom shape-fluid-x svg-shim text-gray-200">
+  <%= render_landkit_svg 'img/shapes/curves/curve-3.svg' %>
+</div>
 </div>
 
 <!-- STATS ================================================== -->
 <section class="pt-12 pt-md-13 bg-gray-200">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-12 col-md-5 col-lg-6 order-md-2">
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col-12 col-md-5 col-lg-6 order-md-2">
 
-        <!-- Image -->
-        <%= image_pack_tag 'media/illustrations/illustration-8.png', class: "img-fluid mb-6 mb-md-0"%>
+      <!-- Image -->
+      <%= image_pack_tag 'media/illustrations/illustration-8.png', class: "img-fluid mb-6 mb-md-0"%>
 
-      </div>
-      <div class="col-12 col-md-7 col-lg-6 order-md-1">
-
-        <!-- Heading -->
-        <h2>
-          Life is too short to waste time.
-          <br>
-          <span class="text-primary">Streamline your hiring.</span>
-        </h2>
-
-        <!-- Text -->
-        <p class="font-size-lg text-gray-700 mb-6">
-          We want to help you eliminate your tedious paperwork so you can focus on your business.
-        </p>
-      </div>
     </div>
-    <!-- / .row -->
+    <div class="col-12 col-md-7 col-lg-6 order-md-1">
+
+      <!-- Heading -->
+      <h2>
+        Life is too short to waste time.
+        <br>
+        <span class="text-primary">Streamline your hiring.</span>
+      </h2>
+
+      <!-- Text -->
+      <p class="font-size-lg text-gray-700 mb-6">
+        We want to help you eliminate your tedious paperwork so you can focus on your business.
+      </p>
+    </div>
   </div>
-  <!-- / .container -->
+  <!-- / .row -->
+</div>
+<!-- / .container -->
 </section>
 
 <!-- PRICING ================================================== -->
 <section class="pt-9 pt-md-12 bg-gray-200">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-10 col-lg-8 text-center">
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8 text-center">
 
-        <!-- Heading -->
-        <h1>
-          Pricing
-        </h1>
+      <!-- Heading -->
+      <h1>
+        Pricing
+      </h1>
 
-        <!-- Text -->
-        <p class="lead text-gray-700">
-          We're free to try while we're just starting out.
-        </p>
+      <!-- Text -->
+      <p class="lead text-gray-700">
+        * We're free to try while we're just starting out.
+      </p>
 
-      </div>
     </div>
-    <!-- / .row -->
-    <div class="row align-items-center no-gutters">
-      <div class="col-12 col-md-6">
+  </div>
+  <!-- / .row -->
+  <div class="row align-items-center no-gutters">
+    <div class="col-12 col-md-6">
 
-        <!-- Card -->
-        <div class="card rounded-lg shadow-lg mb-6 mb-md-0" style="z-index: 1;" data-aos="fade-up">
+      <!-- Card -->
+      <div class="card rounded-lg shadow-lg mb-6 mb-md-0" style="z-index: 1;" data-aos="fade-up">
 
-          <!-- Body -->
-          <div class="card-body py-6 py-md-8">
-            <div class="row justify-content-center">
-              <div class="col-12 col-xl-9">
+        <!-- Body -->
+        <div class="card-body py-6 py-md-8">
+          <div class="row justify-content-center">
+            <div class="col-12 col-xl-9">
 
-                <!-- Badge -->
-                <div class="text-center mb-5">
-                  <span class="badge badge-pill badge-primary-soft">
-                    <span class="h6 font-weight-bold text-uppercase">Standard</span>
-                  </span>
-                </div>
+              <!-- Badge -->
+              <div class="text-center mb-5">
+                <span class="badge badge-pill badge-primary-soft">
+                  <span class="h6 font-weight-bold text-uppercase">Standard</span>
+                </span>
+              </div>
 
-                <!-- Price -->
-                <div class="d-flex justify-content-center">
-                  <span class="h2 mb-0 mt-2">$</span>
-                  <span class="price display-2 mb-0" data-annual="29" data-monthly="49">0</span>
-                  <span class="h2 align-self-end mb-1">/mo</span>
+              <!-- Price -->
+              <div class="d-flex justify-content-center">
+                <span class="h2 mb-0 mt-2">$</span>
+                <span class="price display-2 mb-0" data-annual="29" data-monthly="49">0*</span>
+                <span class="h2 align-self-end mb-1">/mo</span>
+              </div>
+
+              <!-- Text -->
+              <p class="text-center text-muted mb-6 mb-md-8">
+                per recruiter
+              </p>
+
+              <!-- Features -->
+              <div class="d-flex">
+
+                <!-- Check -->
+                <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                  <i data-feather="check"></i>
                 </div>
 
                 <!-- Text -->
-                <p class="text-center text-muted mb-6 mb-md-8">
-                  per recruiter
+                <p>
+                  Custom hiring posts
                 </p>
 
-                <!-- Features -->
-                <div class="d-flex">
+              </div>
+              <div class="d-flex">
 
-                  <!-- Check -->
-                  <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-                    <i data-feather="check"></i>
-                  </div>
-
-                  <!-- Text -->
-                  <p>
-                    Custom hiring posts
-                  </p>
-
+                <!-- Check -->
+                <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                  <i data-feather="check"></i>
                 </div>
-                <div class="d-flex">
 
-                  <!-- Check -->
-                  <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-                    <i data-feather="check"></i>
-                  </div>
-
-                  <!-- Text -->
-                  <p>
-                    Fully editable email templates
-                  </p>
-
-                </div>
-                <div class="d-flex">
-
-                  <!-- Check -->
-                  <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-                    <i data-feather="check"></i>
-                  </div>
-
-                  <!-- Text -->
-                  <p>
-                    Interview scheduling
-                  </p>
-
-                </div>
-                <div class="d-flex">
-
-                  <!-- Check -->
-                  <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-                    <i data-feather="check"></i>
-                  </div>
-
-                  <!-- Text -->
-                  <p>
-                    Private notes
-                  </p>
-
-                </div>
-                <div class="d-flex">
-
-                  <!-- Check -->
-                  <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-                    <i data-feather="check"></i>
-                  </div>
-
-                  <!-- Text -->
-                  <p class="mb-0">
-                    Email support
-                  </p>
-
-                </div>
+                <!-- Text -->
+                <p>
+                  Fully editable email templates
+                </p>
 
               </div>
-            </div>
-            <!-- / .row -->
-          </div>
+              <div class="d-flex">
 
-          <!-- Button -->
-          <a href="#apply-for-invite" class="card-btn btn btn-block btn-lg btn-primary rounded-bottom">
-            Apply for an invite
-          </a>
+                <!-- Check -->
+                <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                  <i data-feather="check"></i>
+                </div>
+
+                <!-- Text -->
+                <p>
+                  Interview scheduling
+                </p>
+
+              </div>
+              <div class="d-flex">
+
+                <!-- Check -->
+                <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                  <i data-feather="check"></i>
+                </div>
+
+                <!-- Text -->
+                <p>
+                  Private notes
+                </p>
+
+              </div>
+              <div class="d-flex">
+
+                <!-- Check -->
+                <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                  <i data-feather="check"></i>
+                </div>
+
+                <!-- Text -->
+                <p class="mb-0">
+                  Email support
+                </p>
+
+              </div>
+
+            </div>
+          </div>
+          <!-- / .row -->
+        </div>
+
+        <!-- Button -->
+        <a href="#apply-for-invite" class="card-btn btn btn-block btn-lg btn-primary rounded-bottom">
+          Apply for an invite
+        </a>
+
+      </div>
+
+    </div>
+    <div class="col-12 col-md-6 ml-md-n3">
+
+      <!-- Card -->
+      <div class="card rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+
+        <!-- Body -->
+        <div class="card-body py-6 py-md-8">
+          <div class="row justify-content-center">
+            <div class="col-12 col-xl-10">
+
+              <!-- Badge -->
+              <p class="text-center mb-8 mb-md-11">
+                <span class="badge badge-pill badge-primary-soft">
+                  <span class="h6 font-weight-bold text-uppercase">Enterprise</span>
+                </span>
+              </p>
+
+              <!-- Text -->
+              <p class="lead text-center text-muted mb-0 mb-md-10">
+                Always updatable on-site deployments, tight integrations with existing tooling, strict data compliance policies, etc. We'll have something for you soon.
+              </p>
+
+            </div>
+          </div>
+          <!-- / .row -->
+        </div>
+
+        <!-- Button -->
+        <div href="#!" class="card-btn btn btn-block btn-lg btn-light bg-gray-300 text-gray-700 rounded-bottom">
+          Coming soon
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <!-- / .row -->
+</div>
+<!-- / .container -->
+</section>
+
+<!-- SHAPE ================================================== -->
+<div class="position-relative mt-n15">
+<div class="shape shape-bottom shape-fluid-x svg-shim text-dark">
+  <%= render_landkit_svg 'img/shapes/curves/curve-1.svg' %>
+</div>
+</div>
+
+<!-- FAQ ================================================== -->
+<section class="pt-15 bg-dark">
+<div class="container pt-8 pt-md-11">
+  <div class="row">
+    <div class="col-12 col-md-6">
+
+      <!-- Item -->
+      <div class="d-flex">
+
+        <!-- Badge -->
+        <div class="badge badge-lg badge-rounded-circle badge-success">
+          <span>?</span>
+        </div>
+
+        <div class="ml-5">
+
+          <!-- Heading -->
+          <h4 class="text-white">
+            Will you charge after your private beta?
+          </h4>
+
+          <!-- Text -->
+          <p class="text-muted mb-6 mb-md-8">
+            Yes, we will. During the private beta period, we’ll be building the features based on the demands of a small pool of participants. You’ll be heard and your problems will be solved. In return, WorkLark will run for you, for free. Afterward, we’ll
+            charge you a nominal fee.
+          </p>
 
         </div>
 
       </div>
-      <div class="col-12 col-md-6 ml-md-n3">
 
-        <!-- Card -->
-        <div class="card rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+    </div>
+    <div class="col-12 col-md-6">
 
-          <!-- Body -->
-          <div class="card-body py-6 py-md-8">
-            <div class="row justify-content-center">
-              <div class="col-12 col-xl-10">
+      <!-- Item -->
+      <div class="d-flex">
 
-                <!-- Badge -->
-                <p class="text-center mb-8 mb-md-11">
-                  <span class="badge badge-pill badge-primary-soft">
-                    <span class="h6 font-weight-bold text-uppercase">Enterprise</span>
-                  </span>
-                </p>
+        <!-- Badge -->
+        <div class="badge badge-lg badge-rounded-circle badge-success">
+          <span>?</span>
+        </div>
 
-                <!-- Text -->
-                <p class="lead text-center text-muted mb-0 mb-md-10">
-                  Always updatable on-site deployments, tight integrations with existing tooling, strict data compliance policies, etc. We'll have something for you soon.
-                </p>
+        <div class="ml-5">
 
-              </div>
-            </div>
-            <!-- / .row -->
-          </div>
+          <!-- Heading -->
+          <h4 class="text-white">
+            How does it work?
+          </h4>
 
-          <!-- Button -->
-          <div href="#!" class="card-btn btn btn-block btn-lg btn-light bg-gray-300 text-gray-700 rounded-bottom">
-            Coming soon
-          </div>
+          <!-- Text -->
+          <p class="text-muted mb-6 mb-md-0">
+            We will walk you through the process so nothing is left out. Save time with the customized application form. WorkLark gives you the flexibility to. You publish.
+          </p>
 
         </div>
 
@@ -446,106 +516,36 @@
   <!-- / .container -->
 </section>
 
-<!-- SHAPE ================================================== -->
-<div class="position-relative mt-n15">
-  <div class="shape shape-bottom shape-fluid-x svg-shim text-dark">
-    <%= render_landkit_svg 'img/shapes/curves/curve-1.svg' %>
+<!-- CTA ================================================== -->
+<section class="py-8 py-md-11 bg-dark">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 text-center">
+
+        <!-- Badge -->
+        <span class="badge badge-pill badge-gray-700-soft mb-4">
+          <span class="h6 font-weight-bold text-uppercase">Get started</span>
+        </span>
+
+        <!-- Heading -->
+        <h1 class="display-4 text-white">
+          Screen Smarter, Hire faster.
+        </h1>
+
+        <!-- Text -->
+        <p class="font-size-lg text-muted mb-6 mb-md-8">
+          WorkLark is here to save your time.
+        </p>
+
+        <!-- Button -->
+        <a href="#apply-for-invite" class="btn btn-success lift">
+          Apply for an invite
+          <i data-feather="arrow-up"></i>
+        </a>
+
+      </div>
+    </div>
+    <!-- / .row -->
   </div>
-</div>
-
-<!-- FAQ ================================================== -->
-<section class="pt-15 bg-dark">
-  <div class="container pt-8 pt-md-11">
-    <div class="row">
-      <div class="col-12 col-md-6">
-
-        <!-- Item -->
-        <div class="d-flex">
-
-          <!-- Badge -->
-          <div class="badge badge-lg badge-rounded-circle badge-success">
-            <span>?</span>
-          </div>
-
-          <div class="ml-5">
-
-            <!-- Heading -->
-            <h4 class="text-white">
-              Will you charge after your private beta?
-            </h4>
-
-            <!-- Text -->
-            <p class="text-muted mb-6 mb-md-8">
-              Yes, we will. During the private beta period, we’ll be building the features based on the demands of a small pool of participants. You’ll be heard and your problems will be solved. In return, WorkLark will run for you, for free. Afterward, we’ll
-              charge you a nominal fee.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-      <div class="col-12 col-md-6">
-
-        <!-- Item -->
-        <div class="d-flex">
-
-          <!-- Badge -->
-          <div class="badge badge-lg badge-rounded-circle badge-success">
-            <span>?</span>
-          </div>
-
-          <div class="ml-5">
-
-            <!-- Heading -->
-            <h4 class="text-white">
-              How does it work?
-            </h4>
-
-            <!-- Text -->
-            <p class="text-muted mb-6 mb-md-0">
-              We will walk you through the process so nothing is left out. Save time with the customized application form. WorkLark gives you the flexibility to. You publish.
-            </p>
-
-          </div>
-
-        </div>
-      </div>
-      <!-- / .row -->
-    </div>
-    <!-- / .container -->
-  </section>
-
-  <!-- CTA ================================================== -->
-  <section class="py-8 py-md-11 bg-dark">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-10 col-lg-8 text-center">
-
-          <!-- Badge -->
-          <span class="badge badge-pill badge-gray-700-soft mb-4">
-            <span class="h6 font-weight-bold text-uppercase">Get started</span>
-          </span>
-
-          <!-- Heading -->
-          <h1 class="display-4 text-white">
-            Screen Smarter, Hire faster.
-          </h1>
-
-          <!-- Text -->
-          <p class="font-size-lg text-muted mb-6 mb-md-8">
-            WorkLark is here to save your time.
-          </p>
-
-          <!-- Button -->
-          <a href="#apply-for-invite" class="btn btn-success lift">
-            Apply for an invite
-            <i data-feather="arrow-up"></i>
-          </a>
-
-        </div>
-      </div>
-      <!-- / .row -->
-    </div>
-    <!-- / .container -->
-  </section>
+  <!-- / .container -->
+</section>
