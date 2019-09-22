@@ -210,26 +210,23 @@
           <div class="card-body">
 
             <!-- Form -->
-            <form>
+            <%= simple_form_for(Invitation.new) do |f| %>
               <div class="form-label-group">
-                <input type="text" class="form-control form-control-flush" id="cardName" placeholder="Name">
-                <label for="cardName">Name</label>
+                <%= f.input_field :name, class: 'form-control form-control-flush', placeholder: 'Name' %>
+                <%= f.label :name %>
               </div>
               <div class="form-label-group">
-                <input type="text" class="form-control form-control-flush" id="cardBusiness" placeholder="Business">
-                <label for="cardBusiness">Business</label>
+                <%= f.input_field :business, class: 'form-control form-control-flush', placeholder: 'Business' %>
+                <%= f.label :business %>
               </div>
               <div class="form-label-group">
-                <input type="email" class="form-control form-control-flush" id="cardEmail" placeholder="Email">
-                <label for="cardEmail">Email</label>
+                <%= f.input_field :email, class: 'form-control form-control-flush', placeholder: 'Email' %>
+                <%= f.label :email %>
               </div>
               <div class="mt-6">
-                <button class="btn btn-block btn-success lift" type="submit">
-                  Apply for an invite
-                </button>
+                <%= f.button :submit, 'Apply for invite', class: 'btn btn-block btn-success lift' %>
               </div>
-            </form>
-
+            <% end %>
           </div>
 
         </div>

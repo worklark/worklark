@@ -16,9 +16,9 @@ ActiveRecord::Schema.define(version: 2019_09_22_131417) do
   enable_extension "plpgsql"
 
   create_table "invitations", force: :cascade do |t|
-    t.string "name"
-    t.string "business"
-    t.string "email"
+    t.string "name", null: false
+    t.string "business", null: false
+    t.string "email", null: false
     t.boolean "approved", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

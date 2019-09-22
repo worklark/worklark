@@ -1,0 +1,54 @@
+<!-- CONTENT ================================================== -->
+<section class="section-border border-primary">
+  <div class="container d-flex flex-column">
+    <div class="row align-items-center justify-content-center no-gutters min-vh-75">
+      <div class="col-12 col-md-5 col-lg-4 py-8 py-md-11">
+
+        <!-- Heading -->
+        <h1 class="display-3 font-weight-bold text-center">
+          You're on the list
+        </h1>
+
+        <!-- Text -->
+        <% if @already_invited %>
+        <p class="mb-5 text-center">
+          You're already on the list <strong><%= @invitation.email %></strong>!
+          You're currently number
+          <strong><%= invitation_number_by_id id: @invitation.id %></strong>
+          on the list.
+        </p>
+        <p class="mb-5 text-center">
+        We're issuing invites slowly to ensure the best experience for everyone!
+        </p>
+        <p class="mb-5 text-center">
+        I'm sorry for the wait. Why not reach out to us, and tell us about your
+        usecase at <a href="mailto:support@worklark.com">support@worklark.com</a>
+        </p>
+
+        <% else %>
+
+        <p class="mb-5 text-center">
+          Thanks for signing up <strong><%= @invitation.name %></strong>!
+          You're currently number
+          <strong><%= invitation_number_by_id id: @invitation.id %></strong>
+          on the list.
+        </p>
+        <p class="mb-5 text-center">
+        We're issuing invites slowly to ensure the best experience for everyone!
+        </p>
+        <% end %>
+
+
+        <!-- Link -->
+        <div class="text-center">
+          <a class="btn btn-primary" href="<%= root_path %>">
+            Back home
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <!-- / .row -->
+  </div>
+  <!-- / .container -->
+</section>
