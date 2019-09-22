@@ -6,12 +6,14 @@
 
         <!-- Headin -->
         <h1 class="display-2">
-          Small team. Big hearts.
+          WorkLark is the only tool you need
         </h1>
 
         <!-- Text -->
         <p class="lead text-muted mb-7 mb-md-9">
-          Our focus is always on finding the best people to work with. Our bar is high, but you look ready to take on the challenge.
+          To streamline your hiring process;<br >
+          To maintain the human experience; and<br >
+          To hire the right candidate
         </p>
 
       </div>
@@ -24,7 +26,7 @@
         <div class="form-row">
           <div class="col-4">
 
-            <%= image_pack_tag 'media/photos/photo-16.jpg', class: "img-fluid rounded shadow-lg", alt:"..." %>
+            <%= image_pack_tag 'media/images/styled-mark.svg', class: "img-fluid rounded", alt:"..." %>
 
           </div>
           <div class="col-3">
@@ -62,84 +64,8 @@
   <!-- / .container -->
 </section>
 
-<!-- LOCATION ================================================== -->
-<section class="pt-8 pt-md-0 border-bottom bg-light">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-6">
 
-        <!-- Map (mobile) -->
-        <div class="embed-responsive embed-responsive-1by1 d-md-none">
-          <div class="embed-responsive-item" data-toggle="map" data-options='{"center": [-118.244615, 34.052979], "zoom": 12}'></div>
-        </div>
-
-        <!-- Map -->
-        <div class="position-relative h-100 vw-50 float-right d-none d-md-block">
-
-          <!-- Map -->
-          <div class="h-100 w-100" data-toggle="map" data-options='{"center": [-118.244615, 34.052979], "zoom": 12}'></div>
-
-          <!-- Shape -->
-          <div class="shape shape-right shape-fluid-y svg-shim text-light">
-
-            <%= render_landkit_svg 'img/shapes/angles/angle-right.svg' %>
-          </div>
-
-        </div>
-
-      </div>
-      <div class="col-12 col-md-6 col-lg-5 offset-lg-1 py-8 py-md-11 py-lg-12">
-
-        <!-- Heading -->
-        <h2>
-          Located in Los Angeles.<br>
-          <span class="text-success">Enjoy
-            <span data-toggle="typed" data-options='{"strings": ["cultural diversity", "white sand beaches", "sunny weekends"]}'></span>.</span>
-        </h2>
-
-        <!-- Text -->
-        <p class="font-size-lg text-gray-700 mb-6">
-          We picked our office location to maximize our team's enjoyment! LA's best restaurants are within walking distance, as well are some of the finest coffee shops in the world. Come visit us and you'll agree.
-        </p>
-
-        <!-- Stats -->
-        <div class="d-flex">
-          <div class="pr-5">
-            <h3 class="text-success mb-0">
-              <span data-toggle="countup" data-from="0" data-to="100" data-aos="data-aos" data-aos-id="countup:in">0</span>%
-            </h3>
-            <p class="text-gray-700 mb-0">
-              Approval
-            </p>
-          </div>
-          <div class="border-left border-gray-300"></div>
-          <div class="px-5">
-            <h3 class="text-success mb-0">
-              <span data-toggle="countup" data-from="0" data-to="85" data-aos="data-aos" data-aos-id="countup:in">0</span>%
-            </h3>
-            <p class="text-gray-700 mb-0">
-              Sunny days
-            </p>
-          </div>
-          <div class="border-left border-gray-300"></div>
-          <div class="pl-5">
-            <h3 class="text-success mb-0">
-              <span data-toggle="countup" data-from="0" data-to="52" data-aos="data-aos" data-aos-id="countup:in">0</span>/<span data-toggle="countup" data-from="0" data-to="48" data-aos="data-aos" data-aos-id="countup:in">0</span>
-            </h3>
-            <p class="text-gray-700 mb-0">
-              Gender ratio
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <!-- / .row -->
-  </div>
-  <!-- / .container -->
-</section>
-
-<!-- COMPANIES ================================================== -->
+<!-- PEOPLE ================================================== -->
 <section class="py-8 py-md-11">
   <div class="container">
     <div class="row justify-content-center">
@@ -147,151 +73,89 @@
 
         <!-- Heading -->
         <h2>
-          We strive to work with the best.
-          <br/>
-          The best companies in the world.
+          Starting small. Aiming for a big impact.
         </h2>
 
         <!-- Text -->
         <p class="font-size-lg text-muted mb-7 mb-md-9">
-          Landkit is a best place to work with some of the greatest tech companies in the world.
+          We're a small team focused on making a big difference. People passionate about changing the world should work together. Interested? Join us!
         </p>
 
       </div>
     </div>
     <!-- / .row -->
-    <div class="row">
-      <div class="col-4 col-md-2">
+    <div class="row justify-content-center">
+      <div class="col-4">
 
-        <div class="img-fluid img-fluid mb-6 mb-md-8 svg-shim" style="color: #FF5A5F;">
+        <!-- Card -->
+        <div class="card text-center shadow-light-lg">
 
-          <%= render_landkit_svg 'img/brands/logotype/airbnb.svg' %>
+          <!-- Image -->
+          <%= image_pack_tag 'media/team/amin.jpg', class: "card-img-top"%>
+
+          <!-- Shape -->
+          <div class="position-relative">
+            <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+              <%= render_landkit_svg 'img/shapes/curves/curve-1.svg' %>
+            </div>
+          </div>
+
+          <!-- Body -->
+          <div class="card-body">
+            <p class="card-title">Amin Shah Gilani, CEO</p>
+            <ul class="card-text list-unstyled list-inline list-social mb-6 mb-md-0">
+              <li class="list-inline-item list-social-item mr-3">
+                <a href="https://www.linkedin.com/in/amingilani" class="text-decoration-none" target="_blank">
+                  <i data-feather="linkedin" class="list-social-icon"></i>
+                </a>
+              </li>
+              <li class="list-inline-item list-social-item mr-3">
+                <a href="https://twitter.com/amingilani" class="text-decoration-none" target="_blank">
+                  <i data-feather="twitter" class="list-social-icon"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
         </div>
-
       </div>
-      <div class="col-4 col-md-2">
+      <div class="col-4">
 
-        <div class="img-fluid img-fluid mb-6 mb-md-8 svg-shim" style="color: #0081C9;">
+        <!-- Card -->
+        <div class="card text-center shadow-light-lg">
 
-          <%= render_landkit_svg 'img/brands/logotype/coinbase.svg' %>
+          <!-- Image -->
+          <%= image_pack_tag 'media/team/izza.jpg', class: "card-img-top"%>
+
+          <!-- Shape -->
+          <div class="position-relative">
+            <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+              <%= render_landkit_svg 'img/shapes/curves/curve-1.svg' %>
+            </div>
+          </div>
+
+          <!-- Body -->
+          <div class="card-body">
+            <p class="card-title">Izza Shahid Gilani, COO</p>
+            <ul class="card-text list-unstyled list-inline list-social mb-6 mb-md-0">
+              <li class="list-inline-item list-social-item mr-3">
+                <a href="https://www.linkedin.com/in/izzagilani" class="text-decoration-none" target="_blank">
+                  <i data-feather="linkedin" class="list-social-icon"></i>
+                </a>
+              </li>
+              <li class="list-inline-item list-social-item mr-3">
+                <a href="https://twitter.com/izzagilani" class="text-decoration-none" target="_blank">
+                  <i data-feather="twitter" class="list-social-icon"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-
       </div>
-      <div class="col-4 col-md-2">
-
-        <div class="img-fluid img-fluid mb-6 mb-md-8 svg-shim" style="color: #DA5988;">
-
-          <%= render_landkit_svg 'img/brands/logotype/dribbble.svg' %>
-        </div>
-
-      </div>
-      <div class="col-4 col-md-2">
-
-        <div class="img-fluid img-fluid mb-6 mb-md-8 svg-shim" style="color: #3F5D87;">
-
-          <%= render_landkit_svg 'img/brands/logotype/instagram.svg' %>
-        </div>
-
-      </div>
-      <div class="col-4 col-md-2">
-
-        <div class="img-fluid img-fluid mb-6 mb-md-8 svg-shim" style="color: #B81D24;">
-
-          <%= render_landkit_svg 'img/brands/logotype/netflix.svg' %>
-        </div>
-
-      </div>
-      <div class="col-4 col-md-2">
-
-        <div class="img-fluid img-fluid mb-6 mb-md-8 svg-shim" style="color: #CB2027;">
-
-          <%= render_landkit_svg 'img/brands/logotype/pinterest.svg' %>
-        </div>
-
-      </div>
-      <div class="col-4 col-md-2">
-
-        <div class="img-fluid img-fluid mb-6 mb-md-8 svg-shim" style="color: #6772E5;">
-
-          <%= render_landkit_svg 'img/brands/logotype/stripe.svg' %>
-        </div>
-
-      </div>
-      <div class="col-4 col-md-2">
-
-        <div class="img-fluid img-fluid mb-6 mb-md-8 svg-shim" style="color: #004F9D;">
-
-          <%= render_landkit_svg 'img/brands/logotype/facebook.svg' %>
-        </div>
-
-      </div>
-      <div class="col-4 col-md-2">
-
-        <div class="img-fluid img-fluid mb-6 mb-md-8 svg-shim" style="color: #CB2027;">
-
-          <%= render_landkit_svg 'img/brands/logotype/pinterest.svg' %>
-        </div>
-
-      </div>
-      <div class="col-4 col-md-2">
-
-        <div class="img-fluid img-fluid mb-6 mb-md-8 svg-shim" style="color: #1F8DED;">
-
-          <%= render_landkit_svg 'img/brands/logotype/intercom.svg' %>
-        </div>
-
-      </div>
-      <div class="col-4 col-md-2">
-
-        <div class="img-fluid img-fluid mb-6 mb-md-8 svg-shim" style="color: #7289DA;">
-
-          <%= render_landkit_svg 'img/brands/logotype/discord.svg' %>
-        </div>
-
-      </div>
-      <div class="col-4 col-md-2">
-
-        <div class="img-fluid img-fluid mb-6 mb-md-8 svg-shim" style="color: #0080FF;">
-
-          <%= render_landkit_svg 'img/brands/logotype/digital-ocean.svg' %>
-        </div>
-
-      </div>
-
     </div>
     <!-- / .row -->
   </div>
   <!-- / .container -->
-</section>
-
-<!-- SLIDER ================================================== -->
-<section>
-  <div class="flickity-button-white flickity-button-inset" data-flickity='{"imagesLoaded": true, "wrapAround": true, "pageDots": false}'>
-    <div class="w-100">
-
-      <!-- Image -->
-      <%= image_pack_tag 'media/covers/cover-11.jpg', class: "img-fluid w-100", alt:"..." %>
-
-      <!-- Shape -->
-      <div class="shape shape-top shape-fluid-x svg-shim text-white">
-
-        <%= render_landkit_svg 'img/shapes/waves/wave-1.svg' %>
-      </div>
-
-    </div>
-    <div class="w-100">
-
-      <!-- Image -->
-      <%= image_pack_tag 'media/covers/cover-3.jpg', class: "img-fluid w-100", alt:"..." %>
-
-      <!-- Shape -->
-      <div class="shape shape-top shape-fluid-x svg-shim text-white">
-
-        <%= render_landkit_svg 'img/shapes/waves/wave-1.svg' %>
-      </div>
-
-    </div>
-  </div>
 </section>
 
 <!-- CTA ================================================== -->
@@ -307,16 +171,8 @@
 
         <!-- Text -->
         <p class="font-size-lg text-muted mb-5 mb-md-0">
-          Hit us up and we'll get in touch with you.
+          Keep following us. We'll have more spots opening up soon.
         </p>
-
-      </div>
-      <div class="col-12 col-md-auto">
-
-        <!-- Button -->
-        <a href="#!" class="btn btn-primary lift">
-          Apply now
-        </a>
 
       </div>
     </div>
