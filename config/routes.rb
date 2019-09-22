@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :invitations
   root to: 'static_pages#home'
   get 'about' => 'static_pages#about', as: :about
   get 'terms-of-service' => 'static_pages#terms_of_service', as: :terms_of_service
