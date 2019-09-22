@@ -19,6 +19,9 @@ const imagePath = (name) => images(name, true)
 
 
 import feather from 'feather-icons/dist/feather.min.js';
+import Typed from 'typed.js'
+
+global.Typed = Typed // theme script requires a global Typed variable
 
 const linkKitImages = require.context('../../../vendor/Landkit-1.1.0/src/assets/img', true)
 const landKitImagePath = (name) => images(name, true)
@@ -27,7 +30,8 @@ const landKitImagePath = (name) => images(name, true)
 // theme
 require('jquery/dist/jquery.min.js');
 require('bootstrap/dist/js/bootstrap.bundle.min.js');
-require('typed.js/lib/typed.min.js');
+
+
 
 
 
