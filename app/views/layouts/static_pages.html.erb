@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= yield :head %>
+
+    <% if yield(:head).blank? %>
+      <title>Recruitment software | WorkLark</title>
+    <% else %>
+      <%= yield :head %>
+    <% end %>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,6 +33,6 @@
     <%= render partial: 'static_pages/shared/footer', locals: { class_list: "bg-gray-200" } %>
 
     <%= javascript_pack_tag 'static_pages' %>
-
+    <%= console if Rails.env.development? && params[:console] == "true" %>
   </body>
 </html>
