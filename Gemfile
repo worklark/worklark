@@ -11,8 +11,8 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 6.0.0'
 gem 'sass-rails', '~> 5'
-gem 'webpacker', '~> 4.0'
 gem 'simple_form'
+gem 'webpacker', '~> 4.0'
 # gem 'redis', '~> 4.0'
 
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -23,6 +23,7 @@ end
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'rails_real_favicon'
   gem 'rubocop-rails'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'

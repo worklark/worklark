@@ -85,6 +85,7 @@ GEM
     jaro_winkler (1.5.3)
     jbuilder (2.9.1)
       activesupport (>= 4.2.0)
+    json (2.2.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -136,6 +137,10 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.2.0)
       loofah (~> 2.2, >= 2.2.2)
+    rails_real_favicon (0.0.13)
+      json (>= 1.7, < 3)
+      rails
+      rubyzip (~> 1)
     railties (6.0.0)
       actionpack (= 6.0.0)
       activesupport (= 6.0.0)
@@ -227,6 +232,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (~> 6.0.0)
+  rails_real_favicon
   rubocop-rails
   sass-rails (~> 5)
   selenium-webdriver
