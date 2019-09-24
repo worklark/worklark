@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-
+    <%= render partial: 'shared/google_analytics' if Rails.env.production? %>
     <% if yield(:head).blank? %>
       <title>Recruitment software | WorkLark</title>
     <% else %>
