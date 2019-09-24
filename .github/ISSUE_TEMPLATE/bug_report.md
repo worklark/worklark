@@ -7,10 +7,18 @@ assignees: amingilani
 
 ---
 
-<!--- Note: Lines like these are comments and contain instructions, please read them carefully. -->
-<!--- They will not be part of your final issue request. -->
+<!--- A 2-3 sentence summary of the issue -->
 
-<!--- Provide a general summary of the issue in the Title above -->
+## Detailed Description
+
+<!--- A detailed description of the issue including screenshots -->
+
+## Steps to Reproduce
+<!--- Provide an unambiguous set of steps to reproduce this bug. -->
+1.
+2.
+3.
+4.
 
 ## Expected Behavior
 <!--- Tell us what should happen -->
@@ -19,25 +27,7 @@ assignees: amingilani
 <!--- Tell us what happens instead of the expected behavior -->
 
 ## Possible Solution
-<!--- Not obligatory, but suggest a fix/reason for the bug, -->
-
-## Steps to Reproduce
-<!--- Provide a link to a live example, or an unambiguous set of steps to -->
-<!--- reproduce this bug. Include code to reproduce, if relevant -->
-1.
-2.
-3.
-4.
+<!--- Not obligatory, but suggest a fix/reason for the bug -->
 
 ## Context (Environment)
-<!--- How has this issue affected you? What are you trying to accomplish? -->
-<!--- Providing context helps us come up with a solution that is most useful in the real world -->
-
-<!--- Provide a general summary of the issue in the Title above -->
-
-## Detailed Description
-<!--- Provide a detailed description of the change or addition you are proposing -->
-<!--- Include any screenshots -->
-
-## Possible Implementation
-<!--- Not obligatory, but suggest an idea for implementing addition or change -->
+<!--- What device, browser, OS, etc. were you using? -->
