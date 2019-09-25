@@ -4,13 +4,13 @@ source 'https://rubygems.org'
 
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
+ruby '2.6.4'
 
 gem 'jbuilder', '~> 2.7'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 6.0.0'
-gem 'sass-rails', '~> 5'
+gem 'sass-rails', '~> 6'
 gem 'simple_form'
 gem 'webpacker', '~> 4.0'
 # gem 'redis', '~> 4.0'
