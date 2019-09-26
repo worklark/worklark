@@ -1,0 +1,25 @@
+## This is the Travis CI config for the bot
+## Please ensure you use the long-form name of flags e.g. --tag instead of -t
+## This requires the following API tokens set in Travis CI:
+## - HEROKU_API_KEY: available via `heroku auth:token`
+## - HEROKU_STAGING_APP_NAME: the name of your production app to deploy
+## - HEROKU_STAGING_APP_NAME: the name of your staging to deploy
+
+
+language: generic
+
+services:
+  - docker
+
+# build the docker container
+before_install:
+  - docker build --tag worklark/worklark --tag registry.heroku.com/$HEROKU_STAGING_APP_NAME/web .
+  - curl https://cli-assets.heroku.com/install.sh | sh
+
+# deploy the docker container
+script:
+  - docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com
+  - docker push registry.heroku.com/$HEROKU_STAGING_APP_NAME/web
+  - heroku container:release web --app $HEROKU_STAGING_APP_NAME
+notifications:
+  slack: $SLACK_TRAVIS_APP_TOKEN
