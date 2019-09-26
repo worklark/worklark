@@ -13,13 +13,15 @@ services:
 
 # build the docker container
 before_install:
-  - docker build --tag worklark/worklark --tag registry.heroku.com/$HEROKU_STAGING_APP_NAME/web .
+  - docker build --tag worklark/worklark.web --tag registry.heroku.com/$HEROKU_STAGING_APP_NAME/web --file Dockerfile.web .
+  - docker build --tag worklark/worklark.release --tag registry.heroku.com/$HEROKU_STAGING_APP_NAME/release --file Dockerfile.release .
   - curl https://cli-assets.heroku.com/install.sh | sh
 
 # deploy the docker container
 script:
   - docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com
   - docker push registry.heroku.com/$HEROKU_STAGING_APP_NAME/web
-  - heroku container:release web --app $HEROKU_STAGING_APP_NAME
+  - docker push registry.heroku.com/$HEROKU_STAGING_APP_NAME/release
+  - heroku container:release web release --app $HEROKU_STAGING_APP_NAME
 notifications:
   slack: $SLACK_TRAVIS_APP_TOKEN
