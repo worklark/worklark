@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'invitations/success' =>  'invitations#list'
 
   root to: 'static_pages#home'
