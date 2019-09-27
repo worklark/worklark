@@ -89,10 +89,10 @@
     <div class="modal-content">
       <div class="card card-row">
         <div class="row no-gutters">
-          <div class="col-12 col-md-6 bg-cover card-img-left" style="background-image: url(@@webRoot/assets/img/photos/photo-8.jpg);">
+          <div class="col-12 col-md-6 bg-cover card-img-left" style="background-image: url(<%= asset_pack_url 'media/photos/photo-8.jpg' %>">
 
             <!-- Image (placeholder) -->
-            <img src="@@webRoot/assets/img/photos/photo-8.jpg" alt="..." class="img-fluid d-md-none invisible">
+            <img src="<%= asset_pack_url 'media/photos/photo-8.jpg' %>" alt="..." class="img-fluid d-md-none invisible">
 
             <!-- Shape -->
             <div class="shape shape-right shape-fluid-y svg-shim text-white d-none d-md-block">
@@ -146,7 +146,7 @@
 
               <!-- Text -->
               <p class="mb-0 font-size-sm text-center text-muted">
-                Already have an account? <a href="@@webRoot/signin-illustration.html">Log in</a>.
+                Already have an account? <a href="#">Log in</a>.
               </p>
 
             </div>
@@ -170,12 +170,12 @@
         </button>
 
         <!-- Image -->
-        <img src="@@webRoot/assets/img/photos/photo-7.jpg" alt="..." class="card-img-top">
+        <img src="<%= asset_pack_url 'media/photos/photo-7.jpg' %>" alt="..." class="card-img-top">
 
         <!-- Shape -->
         <div class="position-relative">
           <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-            @@include("../assets/img/shapes/curves/curve-3.svg")
+            <%= render_landkit_svg('img/shapes/curves/curve-3.svg') %>
           </div>
         </div>
 
@@ -220,7 +220,7 @@
 
           <!-- Text -->
           <p class="mb-0 font-size-sm text-center text-muted">
-            Already have an account? <a href="@@webRoot/signin-illustration.html">Log in</a>.
+            Already have an account? <a href="#">Log in</a>.
           </p>
 
         </div>
@@ -236,14 +236,14 @@
     <div class="modal-content">
       <div class="card card-row">
         <div class="row no-gutters">
-          <div class="col-12 col-md-6 bg-cover card-img-left" style="background-image: url(@@webRoot/assets/img/photos/photo-1.jpg);">
+          <div class="col-12 col-md-6 bg-cover card-img-left" style="background-image: url(<%= asset_pack_url 'media/photos/photo-1.jpg' %>);">
 
             <!-- Image (placeholder) -->
-            <img src="@@webRoot/assets/img/photos/photo-1.jpg" alt="..." class="img-fluid d-md-none invisible">
+            <img src="<%= asset_pack_url 'media/photos/photo-1.jpg' %>" alt="..." class="img-fluid d-md-none invisible">
 
             <!-- Shape -->
             <div class="shape shape-right shape-fluid-y svg-shim text-white d-none d-md-block">
-              @@include("../assets/img/shapes/curves/curve-4.svg")
+              <%= render_landkit_svg('img/shapes/curves/curve-4.svg') %>
             </div>
 
           </div>
@@ -293,7 +293,7 @@
 
               <!-- Text -->
               <p class="mb-0 font-size-sm text-center text-muted">
-                Don't have an account yet? <a href="@@webRoot/signin-illustration.html">Sign up</a>.
+                Don't have an account yet? <a href="#">Sign up</a>.
               </p>
 
             </div>
@@ -317,12 +317,12 @@
         </button>
 
         <!-- Image -->
-        <img src="@@webRoot/assets/img/photos/photo-21.jpg" alt="..." class="card-img-top">
+        <img src="<%= asset_pack_url 'media/photos/photo-21.jpg' %>" alt="..." class="card-img-top">
 
         <!-- Shape -->
         <div class="position-relative">
           <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-            @@include("../assets/img/shapes/curves/curve-3.svg")
+            <%= render_landkit_svg('img/shapes/curves/curve-3.svg') %>
           </div>
         </div>
 
@@ -367,7 +367,7 @@
 
           <!-- Text -->
           <p class="mb-0 font-size-sm text-center text-muted">
-            Don't have an account yet? <a href="@@webRoot/signin-illustration.html">Sign up</a>.
+            Don't have an account yet? <a href="#">Sign up</a>.
           </p>
 
         </div>
