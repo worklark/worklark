@@ -1,30 +1,24 @@
 FROM ruby:2.6.4
 
-# replace shell with bash so we can source files
-RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+# Install dependencies, run initial setup, and output the version numbers used
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
+    apt-get update -qq && \
+    apt-get install -y build-essential libpq-dev nodejs ghostscript nodejs && \
+    gem install bundler && \
+    npm install -g yarn && \
+    gem install bundler && \
+    mkdir -p /app && mkdir -p /usr/local/nvm && \
+    node -v && npm -v && yarn -v && bundle -v
 
-RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs ghostscript
-
-RUN mkdir -p /app
-RUN mkdir -p /usr/local/nvm
 WORKDIR /app
-
-RUN curl -sL https://deb.nodesource.com/setup_11.x | bash -
-RUN apt-get install -y nodejs
-
-RUN node -v
-RUN npm -v
 
 # Copy the Gemfile as well as the Gemfile.lock and install
 # the RubyGems. This is a separate step so the dependencies
 # will be cached unless changes to one of those two files
 # are made.
 COPY Gemfile Gemfile.lock package.json yarn.lock ./
-RUN gem install bundler
-RUN bundle install --verbose --jobs 20 --retry 5
-
-RUN npm install -g yarn
-RUN yarn install --check-files
+RUN bundle install --verbose --jobs 20 --retry 5 && \
+    yarn install --check-files
 
 # Copy the main application.
 COPY . ./
