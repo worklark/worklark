@@ -24,6 +24,8 @@
 
     <!-- NAVBAR ================================================== -->
     <%= render partial: 'static_pages/shared/navbar', locals: { class_list: "navbar-light bg-white", type: "boxed" } %>
+    <!-- Alerts -->
+    <%= render partial: 'shared/flash_messages' %>
 
     <!-- WELCOME ================================================== -->
 
@@ -34,6 +36,5 @@
 
     <%= javascript_pack_tag 'static_pages' %>
     <%= console if Rails.env.development? && params[:console] == "true" %>
-    <%= console %>
   </body>
 </html>
