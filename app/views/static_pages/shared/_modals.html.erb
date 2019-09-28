@@ -11,7 +11,7 @@
 
         <!-- Image -->
         <div class="text-center">
-          <img src="../assets/img/illustrations/illustration-1.png" alt="..." class="img-fluid mb-3" style="width: 200px;">
+          <img src="<%= asset_pack_url 'media/illustrations/illustration-1.png' %>" alt="..." class="img-fluid mb-3" style="width: 200px;">
         </div>
 
         <!-- Heading -->
@@ -96,7 +96,7 @@
 
             <!-- Shape -->
             <div class="shape shape-right shape-fluid-y svg-shim text-white d-none d-md-block">
-              @@include("../assets/img/shapes/curves/curve-4.svg")
+              <%= render_landkit_svg('img/shapes/curves/curve-4.svg') %>
             </div>
 
           </div>
