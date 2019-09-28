@@ -1,27 +1,56 @@
-<h2>Change your password</h2>
+<!-- CONTENT
+================================================== -->
+<section>
+  <div class="container d-flex flex-column">
+    <div class="row align-items-center justify-content-center no-gutters min-vh-100">
+      <div class="col-8 col-md-6 col-lg-7 offset-md-1 order-md-2 mt-auto mt-md-0 pt-8 pb-4 py-md-11">
 
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
+        <!-- Image -->
+        <img src="<%= asset_pack_url 'media/illustrations/illustration-8.png' %>" alt="..." class="img-fluid">
 
-  <%= f.input :reset_password_token, as: :hidden %>
-  <%= f.full_error :reset_password_token %>
+      </div>
+      <div class="col-12 col-md-5 col-lg-4 order-md-1 mb-auto mb-md-0 pb-8 py-md-11">
 
-  <div class="form-inputs">
-    <%= f.input :password,
-                label: "New password",
-                required: true,
-                autofocus: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                label: "Confirm your new password",
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-  </div>
+        <!-- Heading -->
+        <h1 class="mb-0 font-weight-bold text-center">
+          Change your password
+        </h1>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Change my password" %>
-  </div>
-<% end %>
+        <!-- Text -->
+        <p class="mb-6 text-center text-dark">
+          Forgot your password? Change it to a new one below.
+        </p>
 
-<%= render "users/shared/links" %>
+        <!-- Form -->
+        <%= simple_form_for(resource, html: { class: 'mb-6'}, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+          <%= f.error_notification %>
+
+          <%= f.input :reset_password_token, as: :hidden %>
+          <%= f.full_error :reset_password_token %>
+
+          <div class="form-inputs">
+            <%= f.input :password,
+                        label: "New password",
+                        required: true,
+                        autofocus: true,
+                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                        input_html: { autocomplete: "new-password" } %>
+            <%= f.input :password_confirmation,
+                        label: "Confirm your new password",
+                        required: true,
+                        input_html: { autocomplete: "new-password" } %>
+          </div>
+
+          <div class="form-actions">
+            <%= f.button :submit, "Change my password", class: 'btn btn-block btn-primary' %>
+          </div>
+        <% end %>
+        
+        <!-- Text -->
+        <p class="mb-0 font-size-sm text-center text-dark">
+          <%= render "users/shared/links" %>
+        </p>
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>
