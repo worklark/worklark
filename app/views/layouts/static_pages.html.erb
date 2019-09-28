@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= render partial: 'shared/google_analytics' if Rails.env.production? %>
     <% if yield(:head).blank? %>
       <title>Recruitment software | WorkLark</title>
     <% else %>
       <%= yield :head %>
     <% end %>
+    <%= render partial: 'shared/google_analytics' if Rails.env.production? %>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -34,5 +34,6 @@
 
     <%= javascript_pack_tag 'static_pages' %>
     <%= console if Rails.env.development? && params[:console] == "true" %>
+    <%= console %>
   </body>
 </html>
