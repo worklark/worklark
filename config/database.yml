@@ -83,3 +83,9 @@ production:
   database: worklark_production
   username: worklark
   password: <%= ENV['WORKLARK_DATABASE_PASSWORD'] %>
+
+staging:
+  <<: *default
+  database: worklark_production
+  username: worklark
+  password: <%= ENV['WORKLARK_DATABASE_PASSWORD'] %>
