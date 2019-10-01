@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_27_182210) do
+ActiveRecord::Schema.define(version: 2019_10_01_105147) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,29 @@ ActiveRecord::Schema.define(version: 2019_09_27_182210) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_invitations_on_email", unique: true
+  end
+
+  create_table "organization_profiles", force: :cascade do |t|
+    t.string "registered_name"
+    t.string "operating_name", null: false
+    t.string "shortname", null: false
+    t.string "website", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_organization_profiles_on_user_id"
+  end
+
+  create_table "user_profiles", force: :cascade do |t|
+    t.string "legal_name", null: false
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "job_title", null: false
+    t.string "phone_number", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_user_profiles_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

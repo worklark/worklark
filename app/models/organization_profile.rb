@@ -1,0 +1,2 @@
+class OrganizationProfile < ApplicationRecord
+end

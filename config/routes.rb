@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  namespace :dashboard do
+    get 'onboarding/user_profile'
+    get 'onboarding/organization_profile'
+    resources :organization_profiles
+    resources :user_profiles
+  end
+  get 'dashboard' => 'dashboard#index'
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     confirmations: 'users/confirmations',
@@ -14,7 +21,6 @@ Rails.application.routes.draw do
   get 'privacy-policy' => 'static_pages#privacy_policy', as: :privacy_policy
   get 'support' => 'static_pages#support', as: :support
   get 'pricing' => 'static_pages#pricing', as: :pricing
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   resources :invitations
 end

@@ -1,0 +1,2 @@
+class OrganizationProfilesController < DashboardController
+end

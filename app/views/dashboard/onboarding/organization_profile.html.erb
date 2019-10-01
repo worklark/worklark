@@ -1,0 +1,58 @@
+<!-- MAIN CONTENT
+================================================== -->
+<div class="main-content">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10 col-xl-8">
+
+        <!-- Header -->
+        <div class="header mt-md-5">
+          <div class="header-body">
+            <div class="row align-items-center">
+              <div class="col">
+
+                <!-- Pretitle -->
+                <h6 class="header-pretitle text-dark">
+                  Onboarding
+                </h6>
+
+                <div class="progress mb-5">
+                  <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <!-- Title -->
+                <h1 class="header-title">
+                  Organization Profile
+                </h1>
+
+              </div>
+            </div> <!-- / .row -->
+          </div>
+        </div>
+        <!-- Form -->
+
+        <%= simple_form_for([:dashboard, @organization_profile], class: 'mb-5') do |f| %>
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <%= f.input :operating_name, hint: 'This is the name your business operates under, e.g. Google' %>
+          </div>
+          <div class="col-12 col-md-6">
+            <%= f.input :registered_name, hint: 'This is the name your business is registered under, e.g. Google LLC' %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <%= f.input :shortname, hint:'This will be part of your hiring page URL, e.g. google → google.worklark.com' %>
+          </div>
+          <div class="col-12 col-md-6">
+            <%= f.input :website, hint: 'e.g. https://www.google.com' %>
+          </div>
+        </div>
+        <%= f.submit 'Save company profile', class: 'btn btn-primary lift mb-5' %>
+        <% end %>
+      </div>
+    </div> <!-- / .row -->
+  </div>
+
+</div> <!-- / .main-content -->

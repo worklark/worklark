@@ -19,6 +19,7 @@ const imagePath = (name) => images(name, true)
 
 
 import feather from 'feather-icons/dist/feather.min.js';
+feather.replace();
 import Typed from 'typed.js'
 
 global.Typed = Typed // theme script requires a global Typed variable
@@ -44,5 +45,3 @@ require('../../../vendor/Landkit-1.1.0/src/assets/js/pricing.js');
 require('../../../vendor/Landkit-1.1.0/src/assets/js/theme.js');
 require('../../../vendor/Landkit-1.1.0/src/assets/js/tooltips.js');
 require('../../../vendor/Landkit-1.1.0/src/assets/js/typed.js');
-
-feather.replace();

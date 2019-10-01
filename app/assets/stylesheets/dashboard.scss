@@ -1,0 +1,34 @@
+// Place all the styles related to the dashboard controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+// Bootstrap functions
+@import 'bootstrap/scss/functions';
+
+// Custom variables
+
+// Dashkit variables
+@import '../../../vendor/Dashkit-1.4.2/src/assets/scss/dashkit/variables';
+
+// Bootstrap core
+@import 'bootstrap/scss/bootstrap';
+
+// Dashkit core
+@import '../../../vendor/Dashkit-1.4.2/src/assets/scss/dashkit/dashkit';
+
+// Custom core
+.dropdown-toggle::after {
+  content: unset;
+}
+.dropup > .dropdown-toggle::after {
+  content: unset;
+}
+.dropright > .dropdown-toggle::after {
+  content: unset;
+}
+.dropleft > .dropdown-toggle::before {
+  content: unset;
+}
+.navbar-vertical .navbar-nav .nav-link[data-toggle="collapse"]:after {
+  content: unset;
+}

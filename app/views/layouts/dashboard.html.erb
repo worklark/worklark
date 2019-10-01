@@ -2,11 +2,12 @@
 <html>
   <head>
     <% if yield(:head).blank? %>
-      <title>Recruitment software | WorkLark</title>
+      <title>Dashboard | WorkLark</title>
     <% else %>
       <%= yield :head %>
     <% end %>
     <%= render partial: 'shared/google_analytics' if Rails.env.production? %>
+
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,15 +16,22 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'static_pages', media: 'all' %>
+    <%= stylesheet_link_tag 'dashboard', media: 'all' %>
   </head>
 
   <body>
-    <!-- MODALS ================================================== -->
-    <%= render partial: 'static_pages/shared/modals' %>
+    <!-- MODALS
+    ================================================== -->
+    <%# render partial: "dashboard/sharedmodals.html" %>
 
-    <!-- NAVBAR ================================================== -->
-    <%= render partial: 'static_pages/shared/navbar', locals: { class_list: "navbar-light bg-white", type: "boxed" } %>
+    <!-- NAVIGATION
+    ================================================== -->
+    <%= render partial: 'dashboard/shared/topnav', locals: {
+      category: "dashboards",
+      subcategory: "",
+      page: "index.html"
+    } %>
+
     <!-- Alerts -->
     <%= render partial: 'shared/flash_messages' %>
 
@@ -32,9 +40,9 @@
     <%= yield %>
 
     <!-- FOOTER ================================================== -->
-    <%= render partial: 'static_pages/shared/footer', locals: { class_list: "bg-gray-200" } %>
+    <%#= render partial: 'dashboard/shared/footer', locals: { class_list: "bg-gray-200" } %>
 
-    <%= javascript_pack_tag 'static_pages' %>
+    <%= javascript_pack_tag 'dashboard' %>
     <%= console if Rails.env.development? && params[:console] == "true" %>
   </body>
 </html>
