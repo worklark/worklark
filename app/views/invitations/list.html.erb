@@ -4,13 +4,25 @@
     <div class="row align-items-center justify-content-center no-gutters min-vh-75">
       <div class="col-12 col-md-5 col-lg-4 py-8 py-md-11">
 
+        <% if @applied && @approved %>
+        <!-- Heading -->
+        <h1 class="display-3 font-weight-bold text-center">
+          Your application has been approved!
+        </h1>
+        <% else %>
         <!-- Heading -->
         <h1 class="display-3 font-weight-bold text-center">
           You're on the list
         </h1>
+        <% end %>
 
         <!-- Text -->
-        <% if @already_invited %>
+        <% if @applied && @approved %>
+        <p class="mb-5 text-center">
+          You're invitation has been approved <strong><%= @invitation.email %></strong>!
+          You can now proceed to sign up!
+        </p>
+        <% elsif @applied %>
         <p class="mb-5 text-center">
           You're already on the list <strong><%= @invitation.email %></strong>!
           You're currently number
@@ -18,13 +30,12 @@
           on the list.
         </p>
         <p class="mb-5 text-center">
-        We're issuing invites slowly to ensure the best experience for everyone!
+          We're issuing invites slowly to ensure the best experience for everyone!
         </p>
         <p class="mb-5 text-center">
-        I'm sorry for the wait. Why not reach out to us, and tell us about your
-        usecase at <a href="mailto:support@worklark.com">support@worklark.com</a>
+          I'm sorry for the wait. Why not reach out to us, and tell us about your
+          usecase at <a href="mailto:support@worklark.com">support@worklark.com</a>
         </p>
-
         <% else %>
 
         <p class="mb-5 text-center">
@@ -38,14 +49,18 @@
         </p>
         <% end %>
 
-
         <!-- Link -->
         <div class="text-center">
-          <a class="btn btn-primary" href="<%= root_path %>">
-            Back home
-          </a>
+        <% if @applied && @approved %>
+        <a class="btn btn-primary" href="<%= new_user_registration_path %>">
+          Sign up
+        </a>
+        <% else %>
+        <a class="btn btn-primary" href="<%= root_path %>">
+          Back home
+        </a>
+        <% end %>
         </div>
-
       </div>
     </div>
     <!-- / .row -->

@@ -5,7 +5,8 @@ class InvitationsController < ApplicationController
     # Already on the list
     @invitation = Invitation.find_by email: params[:invitation][:email]
     if @invitation
-      @already_invited = true
+      @applied = true
+      @approved = @invitation.approved?
       render :list # guard clause
     end
     # New person
