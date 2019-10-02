@@ -497,7 +497,7 @@
           <a href="profile-posts.html" class="dropdown-item">Profile</a>
           <a href="settings.html" class="dropdown-item">Settings</a>
           <hr class="dropdown-divider">
-          <a href="sign-in.html" class="dropdown-item">Logout</a>
+          <%= link_to('Logout', destroy_user_session_path, method: :delete, class:'dropdown-item') %>        
         </div>
 
       </div>

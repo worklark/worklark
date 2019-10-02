@@ -32,14 +32,15 @@
         <!-- Form -->
 
         <%= simple_form_for([:dashboard, @user_profile], class: 'mb-5') do |f| %>
+        <%= f.input :onboarding, as: :fake_hidden, input_html: { value: '1' } %>
         <%= f.input :legal_name, hint: 'As it appears on your ID, e.g. William Bradley Pitt.' %>
 
         <div class="row">
           <div class="col-12 col-md-6">
-            <%= f.input :first_name, label: 'Prefered first name', hint: 'e.g. Brad' %>
+            <%= f.input :first_name, label: 'Preferred first name', hint: 'e.g. Brad' %>
           </div>
           <div class="col-12 col-md-6">
-            <%= f.input :last_name, label: 'Prefered last name', hint: 'e.g. Pitt' %>
+            <%= f.input :last_name, label: 'Preferred last name', hint: 'e.g. Pitt' %>
           </div>
         </div>
 
