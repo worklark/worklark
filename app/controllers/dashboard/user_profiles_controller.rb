@@ -1,4 +1,4 @@
-class UserProfilesController < DashboardController
+class Dashboard::UserProfilesController < DashboardController
   def create
     @user_profile = UserProfile.new
 

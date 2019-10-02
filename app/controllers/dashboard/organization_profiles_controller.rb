@@ -1,2 +1,2 @@
-class OrganizationProfilesController < DashboardController
+class Dashboard::OrganizationProfilesController < DashboardController
 end
