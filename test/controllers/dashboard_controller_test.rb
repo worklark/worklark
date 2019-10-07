@@ -1,9 +1,10 @@
 require 'test_helper'
 
 class DashboardControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
-    get dashboard_index_url
-    assert_response :success
+  class Unauthenticated < DashboardControllerTest
+    test "should get index" do
+      get dashboard_url
+      assert_response :redirect
+    end
   end
-
 end

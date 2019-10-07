@@ -1,13 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+unapproved:
   name: MyString
   business: MyString
-  email: MyString
+  email: alice@example.org
   approved: false
 
-two:
+approved:
   name: MyString
   business: MyString
-  email: MyString
-  approved: false
+  email: bob@example.org
+  approved: true

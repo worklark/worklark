@@ -3,13 +3,15 @@
 one:
   legal_name: MyString
   first_name: MyString
-  middle_name: MyString
   last_name: MyString
   job_title: MyString
+  phone_number: MyString
+  user: alice
 
 two:
   legal_name: MyString
   first_name: MyString
-  middle_name: MyString
   last_name: MyString
   job_title: MyString
+  phone_number: MyString
+  user: bob
