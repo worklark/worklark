@@ -8,6 +8,10 @@
 
 language: generic
 
+cache:
+  directories:
+    - docker-cache
+
 env:
   - DATABASE_URL: postgres://localhost/test_db?pool=5
 
@@ -17,6 +21,9 @@ services:
 
 # build the docker container
 before_install:
+  - docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com
+  - docker pull registry.heroku.com/$HEROKU_STAGING_APP_NAME/web
+  - docker pull registry.heroku.com/$HEROKU_STAGING_APP_NAME/release
   - docker build --tag worklark/worklark.web --tag registry.heroku.com/$HEROKU_STAGING_APP_NAME/web --file Dockerfile.web .
   - docker build --tag worklark/worklark.release --tag registry.heroku.com/$HEROKU_STAGING_APP_NAME/release --file Dockerfile.release .
   - curl https://cli-assets.heroku.com/install.sh | sh
@@ -24,7 +31,6 @@ before_install:
 # deploy the docker container
 script:
   - docker run worklark/worklark.web "cd /app && RAILS_ENV=test bundle exec rake --trace db:create db:migrate test"
-  - docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com
   - docker push registry.heroku.com/$HEROKU_STAGING_APP_NAME/web
   - docker push registry.heroku.com/$HEROKU_STAGING_APP_NAME/release
   - heroku container:release web release --app $HEROKU_STAGING_APP_NAME
