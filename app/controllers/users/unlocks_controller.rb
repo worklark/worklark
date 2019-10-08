@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Users::UnlocksController < Devise::UnlocksController
-  layout "static_pages"
+  layout 'static_pages'
   # GET /resource/unlock/new
   # def new
   #   super

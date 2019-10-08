@@ -1,5 +1,5 @@
 class InvitationsController < ApplicationController
-  layout "static_pages"
+  layout 'static_pages'
 
   def create
     # Already on the list
@@ -11,9 +11,7 @@ class InvitationsController < ApplicationController
     end
     # New person
     @invitation = Invitation.new(invitation_params)
-    if @invitation.save
-      render :list
-    end
+    render :list if @invitation.save
   end
 
   private

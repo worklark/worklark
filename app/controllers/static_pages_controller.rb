@@ -1,19 +1,13 @@
 class StaticPagesController < ApplicationController
-  def home
-  end
+  def home; end
 
-  def about
-  end
+  def about; end
 
-  def terms_of_service
-  end
+  def terms_of_service; end
 
-  def privacy_policy
-  end
+  def privacy_policy; end
 
-  def support
-  end
+  def support; end
 
-  def pricing
-  end
+  def pricing; end
 end

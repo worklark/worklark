@@ -7,7 +7,7 @@ module ApplicationHelper
 
   # filters out flash not mapped to bootstrap classes
   def flash_filter(flash)
-    flash.select{|k, v| FLASH_TO_BOOTSTRAP_MAP.keys.include? k.to_sym}
+    flash.select { |k, _v| FLASH_TO_BOOTSTRAP_MAP.keys.include? k.to_sym }
   end
 
   # the
