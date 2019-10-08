@@ -20,17 +20,24 @@ before_install:
     docker build \
       --cache-from registry.heroku.com/$HEROKU_STAGING_APP_NAME/web \
       --tag worklark/worklark.web:latest \
-      --tag registry.heroku.com/$HEROKU_STAGING_APP_NAME/web \
       --file Dockerfile.web .
   - >
     docker build \
       --cache-from worklark/worklark.web:latest \
       --tag worklark/worklark.release:latest \
-      --tag registry.heroku.com/$HEROKU_STAGING_APP_NAME/release \
       --file Dockerfile.release .
   - docker-compose up -d
   - docker-compose exec web bundle exec rubocop
   - docker-compose exec web bundle exec rake --trace db:create db:migrate test
+  - >
+    docker tag worklark/worklark.web:latest
+    registry.heroku.com/$HEROKU_STAGING_APP_NAME/web &&
+    docker tag worklark/worklark.release:latest
+    registry.heroku.com/$HEROKU_STAGING_APP_NAME/release &&
+    docker tag worklark/worklark.web:latest
+    registry.heroku.com/$HEROKU_PRODUCTION_APP_NAME/web &&
+    docker tag worklark/worklark.release:latest
+    registry.heroku.com/$HEROKU_PRODUCTION_APP_NAME/release
   - curl https://cli-assets.heroku.com/install.sh | sh
 
 # deploy the docker container
@@ -40,5 +47,6 @@ script:
   - docker push registry.heroku.com/$HEROKU_PRODUCTION_APP_NAME/web # production
   - docker push registry.heroku.com/$HEROKU_PRODUCTION_APP_NAME/release # production
   - heroku container:release web release --app $HEROKU_STAGING_APP_NAME
+  - heroku container:release web release --app $HEROKU_PRODUCTION_APP_NAME
 notifications:
   slack: $SLACK_TRAVIS_APP_TOKEN
