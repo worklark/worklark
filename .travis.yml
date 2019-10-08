@@ -14,8 +14,8 @@ services:
 # build the docker container
 before_install:
   - docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com
-  - docker pull registry.heroku.com/$HEROKU_STAGING_APP_NAME/web
-  - docker pull registry.heroku.com/$HEROKU_STAGING_APP_NAME/release
+  - docker pull registry.heroku.com/$HEROKU_STAGING_APP_NAME/web || true
+  - docker pull registry.heroku.com/$HEROKU_STAGING_APP_NAME/release || true
   - >
     docker build \
       --cache-from registry.heroku.com/$HEROKU_STAGING_APP_NAME/web \
