@@ -18,13 +18,13 @@ before_install:
   - docker pull registry.heroku.com/$HEROKU_STAGING_APP_NAME/release
   - >
     docker build \
-      --cache-from worklark/worklark.web:latest \
+      --cache-from registry.heroku.com/$HEROKU_STAGING_APP_NAME/web \
       --tag worklark/worklark.web:latest \
       --tag registry.heroku.com/$HEROKU_STAGING_APP_NAME/web \
       --file Dockerfile.web .
   - >
     docker build \
-      --cache-from worklark/worklark.release:latest \
+      --cache-from registry.heroku.com/$HEROKU_STAGING_APP_NAME/release \
       --tag worklark/worklark.release:latest \
       --tag registry.heroku.com/$HEROKU_STAGING_APP_NAME/release \
       --file Dockerfile.release .
