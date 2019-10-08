@@ -24,7 +24,7 @@ before_install:
       --file Dockerfile.web .
   - >
     docker build \
-      --cache-from registry.heroku.com/$HEROKU_STAGING_APP_NAME/release \
+      --cache-from worklark/worklark.web:latest \
       --tag worklark/worklark.release:latest \
       --tag registry.heroku.com/$HEROKU_STAGING_APP_NAME/release \
       --file Dockerfile.release .
