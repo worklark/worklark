@@ -19,6 +19,7 @@ before_install:
   - docker build --tag worklark/worklark.web --tag registry.heroku.com/$HEROKU_STAGING_APP_NAME/web --file Dockerfile.web .
   - docker build --tag worklark/worklark.release --tag registry.heroku.com/$HEROKU_STAGING_APP_NAME/release --file Dockerfile.release .
   - docker-compose up -d
+  - docker-compose exec web bundle exec rubocop
   - docker-compose exec web bundle exec rake --trace db:create db:migrate test
   - curl https://cli-assets.heroku.com/install.sh | sh
 
