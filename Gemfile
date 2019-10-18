@@ -23,6 +23,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'launchy', '~> 2.4', '>= 2.4.3'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rails_real_favicon'
   gem 'rubocop-rails'
