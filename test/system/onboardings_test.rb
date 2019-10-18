@@ -23,7 +23,7 @@ class OnboardingsTest < ApplicationSystemTestCase
     login
     fill_in_user_profile
     fill_in_organization_profile
-    assert_selector "h1", text: "Organization Profile"
+    assert_selector "h1", text: "Jobs"
   end
 
   private
