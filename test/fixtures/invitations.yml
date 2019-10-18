@@ -9,5 +9,11 @@ unapproved:
 approved:
   name: MyString
   business: MyString
+  email: jim@example.org
+  approved: true
+
+approved_and_registered:
+  name: MyString
+  business: MyString
   email: bob@example.org
   approved: true
