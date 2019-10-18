@@ -5,11 +5,4 @@ one:
   operating_name: MyString
   shortname: MyString
   website: MyString
-  user: alice 
-
-two:
-  registered_name: MyString
-  operating_name: MyString
-  shortname: MyString
-  website: MyString
-  user: bob 
+  user: onboarded
