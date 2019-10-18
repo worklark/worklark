@@ -7,6 +7,10 @@
 
 // Custom variables
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+$font-family-sans-serif: 'Open Sans', sans-serif !default;
+
+
 // Dashkit variables
 @import '../../../vendor/Dashkit-1.4.2/src/assets/scss/dashkit/variables';
 
@@ -31,4 +35,25 @@
 }
 .navbar-vertical .navbar-nav .nav-link[data-toggle="collapse"]:after {
   content: unset;
+}
+
+.avatar-offline {
+  .avatar-img {
+    mask-image: unset;
+  }
+}
+
+.avatar:after {
+    background-image: unset;
+}
+
+.avatar-offline .avatar-img {
+  -webkit-mask-image: unset;
+          mask-image: unset;
+}
+
+
+.avatar-group .avatar:not(:last-child) {
+  -webkit-mask-image: unset;
+          mask-image: unset;
 }
