@@ -1,2 +1,0 @@
-class JobDescriptionsController < ApplicationController
-end

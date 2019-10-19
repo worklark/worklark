@@ -18,6 +18,7 @@ class CreateJobDescriptions < ActiveRecord::Migration[6.0]
       t.string :keywords
       t.integer :salary_rate
       t.string :salary_currency
+      t.references :organization_profile
 
       t.timestamps
     end

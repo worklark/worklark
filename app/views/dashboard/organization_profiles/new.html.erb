@@ -1,0 +1,61 @@
+<!-- MAIN CONTENT
+================================================== -->
+<div class="main-content">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10 col-xl-8">
+
+        <!-- Header -->
+        <div class="header mt-md-5">
+          <div class="header-body">
+            <div class="row align-items-center">
+              <div class="col">
+
+                <!-- Pretitle -->
+                <h6 class="header-pretitle text-dark">
+                  Onboarding
+                </h6>
+
+                <div class="progress mb-5">
+                  <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <!-- Title -->
+                <h1 class="header-title">
+                  User Profile
+                </h1>
+
+              </div>
+            </div> <!-- / .row -->
+          </div>
+        </div>
+        <!-- Form -->
+
+        <%= simple_form_for([:dashboard, @user_profile], class: 'mb-5') do |f| %>
+        <%= f.input :onboarding, as: :fake_hidden, input_html: { value: '1' } %>
+        <%= f.input :legal_name, hint: 'As it appears on your ID, e.g. William Bradley Pitt.' %>
+
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <%= f.input :first_name, label: 'Preferred first name', hint: 'e.g. Brad' %>
+          </div>
+          <div class="col-12 col-md-6">
+            <%= f.input :last_name, label: 'Preferred last name', hint: 'e.g. Pitt' %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <%= f.input :job_title, hint:'e.g. Actor' %>
+          </div>
+          <div class="col-12 col-md-6">
+            <%= f.input :phone_number, hint: 'e.g. +923454007755' %>
+          </div>
+        </div>
+        <%= f.submit 'Save user profile', class: 'btn btn-primary lift mb-5' %>
+        <% end %>
+      </div>
+    </div> <!-- / .row -->
+  </div>
+
+</div> <!-- / .main-content -->

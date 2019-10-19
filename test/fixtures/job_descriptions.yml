@@ -2,28 +2,33 @@
 #
 # Table name: job_descriptions
 #
-#  id               :bigint           not null, primary key
-#  benefits         :text
-#  country          :string
-#  department       :string
-#  description      :text
-#  education        :string
-#  experience       :string
-#  hours_per_week   :integer
-#  industry         :string
-#  internal_code    :string
-#  job_function     :string
-#  job_title        :string
-#  keywords         :string
-#  region           :string
-#  remote           :boolean
-#  requirements     :text
-#  salary_currency  :string
-#  salary_max_cents :integer
-#  salary_min_cents :integer
-#  salary_rate      :integer
-#  created_at       :datetime         not null
-#  updated_at       :datetime         not null
+#  id                      :bigint           not null, primary key
+#  benefits                :text
+#  country                 :string
+#  department              :string
+#  description             :text
+#  education               :string
+#  experience              :string
+#  hours_per_week          :integer
+#  industry                :string
+#  internal_code           :string
+#  job_function            :string
+#  job_title               :string
+#  keywords                :string
+#  region                  :string
+#  remote                  :boolean
+#  requirements            :text
+#  salary_currency         :string
+#  salary_max_cents        :integer
+#  salary_min_cents        :integer
+#  salary_rate             :integer
+#  created_at              :datetime         not null
+#  updated_at              :datetime         not null
+#  organization_profile_id :bigint
+#
+# Indexes
+#
+#  index_job_descriptions_on_organization_profile_id  (organization_profile_id)
 #
 
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
@@ -44,9 +49,11 @@ one:
   experience: MyString
   education: MyString
   keywords: MyString
-  salary_mix: MyString
-  salary_max: MyString
+  salary_min_cents: 20000
+  salary_max_cents: 40000
+  salary_currency: :usd
   salary_rate: MyString
+  organization_profile: abc
 
 two:
   job_title: MyString
@@ -64,6 +71,8 @@ two:
   experience: MyString
   education: MyString
   keywords: MyString
-  salary_mix: MyString
-  salary_max: MyString
+  salary_min_cents: 20000
+  salary_max_cents: 40000
+  salary_currency: :usd
   salary_rate: MyString
+  organization_profile: abc

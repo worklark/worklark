@@ -43,10 +43,12 @@ ActiveRecord::Schema.define(version: 2019_10_19_051505) do
     t.string "keywords"
     t.integer "salary_rate"
     t.string "salary_currency"
+    t.bigint "organization_profile_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "salary_min_cents"
     t.integer "salary_max_cents"
+    t.index ["organization_profile_id"], name: "index_job_descriptions_on_organization_profile_id"
   end
 
   create_table "organization_profiles", force: :cascade do |t|
