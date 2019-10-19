@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2019_10_19_051505) do
     t.string "salary_currency"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "salary_mix_cents"
+    t.integer "salary_min_cents"
     t.integer "salary_max_cents"
   end
 

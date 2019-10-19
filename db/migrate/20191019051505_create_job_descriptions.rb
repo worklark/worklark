@@ -23,7 +23,7 @@ class CreateJobDescriptions < ActiveRecord::Migration[6.0]
     end
 
     add_monetize :job_descriptions,
-                 :salary_mix,
+                 :salary_min,
                  currency: { present: false },
                  amount: { null: true, default: nil }
 
