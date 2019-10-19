@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     get 'onboarding/organization_profile'
     resources :organization_profiles
     resources :user_profiles
+    resources :job_descriptions
   end
   get 'dashboard' => 'dashboard#index'
   devise_for :users, controllers: {

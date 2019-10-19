@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_01_105147) do
+ActiveRecord::Schema.define(version: 2019_10_19_051505) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,30 @@ ActiveRecord::Schema.define(version: 2019_10_01_105147) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_invitations_on_email", unique: true
+  end
+
+  create_table "job_descriptions", force: :cascade do |t|
+    t.string "job_title"
+    t.string "department"
+    t.string "internal_code"
+    t.string "country"
+    t.string "region"
+    t.boolean "remote"
+    t.text "description"
+    t.text "requirements"
+    t.text "benefits"
+    t.string "industry"
+    t.string "job_function"
+    t.integer "hours_per_week"
+    t.string "experience"
+    t.string "education"
+    t.string "keywords"
+    t.integer "salary_rate"
+    t.string "salary_currency"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "salary_mix_cents"
+    t.integer "salary_max_cents"
   end
 
   create_table "organization_profiles", force: :cascade do |t|
