@@ -5,6 +5,6 @@ echo "Running pre-push hook"
 
 # $? stores exit value of the last command
 if [ $? -ne 0 ]; then
- echo "Rubocop and Tests must pass before pushing!"
+ echo "All tests must pass before pushing!"
  exit 1
 fi
