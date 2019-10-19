@@ -10,6 +10,7 @@ AllCops:
     - 'script/**/*'
     - 'bin/*'
     - !ruby/regexp /old_and_unused\.rb$/
+    - lib/tasks/auto_annotate_models.rake
 
 # The default 80 is too short
 Metrics/LineLength:

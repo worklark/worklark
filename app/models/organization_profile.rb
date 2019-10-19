@@ -18,5 +18,5 @@
 
 class OrganizationProfile < ApplicationRecord
   belongs_to :user
-  has_many :job_descriptions
+  has_many :job_descriptions, dependent: :destroy
 end

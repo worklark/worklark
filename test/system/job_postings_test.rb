@@ -12,9 +12,9 @@ class JobPostingsTest < ApplicationSystemTestCase
     assert_selector 'h1', text: 'Job'
   end
 
-  test "creating a job should redirect you to to creating job application requirements" do
+  test 'creating a job should redirect you to to creating job application requirements' do
     login_with_onboarded_account
-    click_on "New job"
+    click_on 'New job'
     fill_in 'job_description[benefits]', with: @one.benefits
     select 'Pakistan', from: 'job_description[country]'
     fill_in 'job_description[department]', with: @one.department
@@ -34,8 +34,8 @@ class JobPostingsTest < ApplicationSystemTestCase
     fill_in 'job_description[salary_max_cents]', with: @one.salary_max_cents
     fill_in 'job_description[salary_min_cents]', with: @one.salary_min_cents
     fill_in 'job_description[salary_rate]', with: @one.salary_rate
-    click_on "Save job description"
-    assert_selector "div", text: "Job description saved"
+    click_on 'Save job description'
+    assert_selector 'div', text: 'Job description saved'
   end
 
   private
