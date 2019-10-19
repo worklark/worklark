@@ -20,6 +20,7 @@ gem 'money-rails', '~>1.12'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
+  gem 'annotate'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
