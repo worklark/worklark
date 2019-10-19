@@ -16,7 +16,7 @@ class JobPostingsTest < ApplicationSystemTestCase
     login_with_onboarded_account
     click_on "New job"
     fill_in 'job_description[benefits]', with: @one.benefits
-    fill_in 'job_description[country]', with: @one.country
+    select 'Pakistan', from: 'job_description[country]'
     fill_in 'job_description[department]', with: @one.department
     fill_in 'job_description[description]', with: @one.description
     fill_in 'job_description[education]', with: @one.education
@@ -28,13 +28,14 @@ class JobPostingsTest < ApplicationSystemTestCase
     fill_in 'job_description[job_title]', with: @one.job_title
     fill_in 'job_description[keywords]', with: @one.keywords
     fill_in 'job_description[region]', with: @one.region
-    fill_in 'job_description[remote]', with: @one.remote
+    check 'job_description[remote]'
     fill_in 'job_description[requirements]', with: @one.requirements
     fill_in 'job_description[salary_currency]', with: @one.salary_currency
     fill_in 'job_description[salary_max_cents]', with: @one.salary_max_cents
     fill_in 'job_description[salary_min_cents]', with: @one.salary_min_cents
     fill_in 'job_description[salary_rate]', with: @one.salary_rate
-    assert_selector "h1", text: "Specify Job Application Requirements"
+    click_on "Save job description"
+    assert_selector "div", text: "Job description saved"
   end
 
   private

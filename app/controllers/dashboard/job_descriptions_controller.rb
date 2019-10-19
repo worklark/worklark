@@ -1,4 +1,4 @@
-class Dashboard::JobDescriptionsController < DashboardApplicationController
+class Dashboard::JobDescriptionsController < DashboardController
   def new
     @job_description = JobDescription.new
   end
@@ -6,6 +6,10 @@ class Dashboard::JobDescriptionsController < DashboardApplicationController
   def create
     @job_description = JobDescription.new job_description_params
     @job_description.organization_profile = current_user.organization_profile
+    if @job_description.save
+      flash[:success] = 'Job description saved!'
+      return redirect_to dashboard_path# TODO
+    end
   end
 
   private

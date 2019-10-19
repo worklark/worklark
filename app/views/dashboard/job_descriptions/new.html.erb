@@ -31,28 +31,35 @@
         </div>
         <!-- Form -->
 
-        <%= simple_form_for([:dashboard, @user_profile], class: 'mb-5') do |f| %>
-        <%= f.input :onboarding, as: :fake_hidden, input_html: { value: '1' } %>
-        <%= f.input :legal_name, hint: 'As it appears on your ID, e.g. William Bradley Pitt.' %>
+        <%= simple_form_for([:dashboard, @job_description], class: 'mb-5') do |f| %>
+        <%= f.input :benefits %>
+        <%= f.input :country %>
+        <%= f.input :department %>
+        <%= f.input :description %>
+        <%= f.input :education %>
+        <%= f.input :experience %>
+        <%= f.input :hours_per_week %>
+        <%= f.input :industry %>
+        <%= f.input :internal_code %>
+        <%= f.input :job_function %>
+        <%= f.input :job_title %>
+        <%= f.input :keywords %>
+        <%= f.input :region %>
+        <%= f.input :remote %>
+        <%= f.input :requirements %>
+        <%= f.input :salary_currency %>
+        <%= f.input :salary_rate %>
 
         <div class="row">
           <div class="col-12 col-md-6">
-            <%= f.input :first_name, label: 'Preferred first name', hint: 'e.g. Brad' %>
+            <%= f.input :salary_max_cents %>
           </div>
           <div class="col-12 col-md-6">
-            <%= f.input :last_name, label: 'Preferred last name', hint: 'e.g. Pitt' %>
-          </div>
-        </div>
+            <%= f.input :salary_min_cents %>
 
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <%= f.input :job_title, hint:'e.g. Actor' %>
-          </div>
-          <div class="col-12 col-md-6">
-            <%= f.input :phone_number, hint: 'e.g. +923454007755' %>
           </div>
         </div>
-        <%= f.submit 'Save user profile', class: 'btn btn-primary lift mb-5' %>
+        <%= f.submit 'Save job description', class: 'btn btn-primary lift mb-5' %>
         <% end %>
       </div>
     </div> <!-- / .row -->
