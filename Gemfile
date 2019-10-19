@@ -14,6 +14,7 @@ gem 'rails', '~> 6.0.0'
 gem 'sass-rails', '~> 6'
 gem 'simple_form'
 gem 'webpacker', '~> 4.0'
+gem 'money-rails', '~>1.12'
 # gem 'redis', '~> 4.0'
 
 gem 'bootsnap', '>= 1.4.2', require: false
