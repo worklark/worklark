@@ -28,7 +28,7 @@ before_install:
       --file Dockerfile.release .
   - docker-compose up -d
   - docker-compose exec web bundle exec rubocop
-  - docker-compose exec web bundle exec rake --trace db:create db:migrate test
+  - docker-compose exec web bundle exec rake --trace db:create db:migrate test:system test
   - >
     docker tag worklark/worklark.web:latest
     registry.heroku.com/$HEROKU_STAGING_APP_NAME/web &&
