@@ -142,7 +142,7 @@ GEM
       ast (~> 2.4.0)
     pg (1.1.4)
     public_suffix (4.0.1)
-    puma (3.12.1)
+    puma (3.12.4)
     rack (2.0.7)
     rack-proxy (0.6.5)
       rack
@@ -275,7 +275,7 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   money-rails (~> 1.12)
   pg (>= 0.18, < 2.0)
-  puma (~> 3.11)
+  puma (~> 3.12)
   rails (~> 6.0.0)
   rails_real_favicon
   rubocop-rails
